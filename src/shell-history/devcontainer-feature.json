@@ -1,0 +1,35 @@
+{
+    "name": "Shell History",
+    "id": "shell-history",
+    "version": "0.0.1",
+    "description": "Preserve per user shell history across dev container instances. Currently supports bash, zsh, and fish",
+    "options": {
+        "IncludeBash": {
+            "type": "boolean",
+            "default": true,
+            "description": "Preserve Bash History"
+        },
+        "IncludeZsh": {
+            "type": "boolean",
+            "default": false,
+            "description": "Preserve Zsh History"
+        },
+        "IncludeFish": {
+            "type": "boolean",
+            "default": false,
+            "description": "Preserve Fish History"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/meaningful-ooo/devcontainer-features/fish"
+    ],
+    "mounts": [
+        {
+            "source": "shell-history",
+            "target": "/var/data/shell-history",
+            "type": "volume"
+        }
+    ],
+    "onCreateCommand": "shell-history-setup.sh"
+}

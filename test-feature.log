@@ -1,0 +1,225 @@
+
+┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
+|    Dev Container Features   |   
+│           v0.72.0           │
+└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘
+
+>  baseImage:         ubuntu:focal
+>  Target Folder:     /Users/bruce/Developer/github/brucemontegani/devcontainer-features
+>  features:          shell-history
+[2024-12-15T15:48:09.917Z] Start: Run: docker buildx version
+[2024-12-15T15:48:10.058Z] Stop (141 ms): Run: docker buildx version
+[2024-12-15T15:48:10.059Z] github.com/docker/buildx v0.18.0 fa4461b9a1ec45c23d1b9e32dee0d0a8ed29900b
+[2024-12-15T15:48:10.059Z] 
+[2024-12-15T15:48:10.059Z] Start: Run: docker -v
+[2024-12-15T15:48:10.071Z] Stop (12 ms): Run: docker -v
+>  workspaceFolder:   /var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features-test/1734277689913
+
+⏳ Building test container...
+
+[2024-12-15T15:48:10.075Z] @devcontainers/cli 0.72.0. Node.js v22.11.0. darwin 24.1.0 arm64.
+[2024-12-15T15:48:10.075Z] Start: Run: docker buildx version
+[2024-12-15T15:48:10.127Z] Stop (52 ms): Run: docker buildx version
+[2024-12-15T15:48:10.127Z] github.com/docker/buildx v0.18.0 fa4461b9a1ec45c23d1b9e32dee0d0a8ed29900b
+[2024-12-15T15:48:10.127Z] 
+[2024-12-15T15:48:10.127Z] Start: Run: docker -v
+[2024-12-15T15:48:10.138Z] Stop (11 ms): Run: docker -v
+[2024-12-15T15:48:10.139Z] Start: Resolving Remote
+[2024-12-15T15:48:10.140Z] Start: Run: git rev-parse --show-cdup
+[2024-12-15T15:48:10.146Z] Stop (6 ms): Run: git rev-parse --show-cdup
+[2024-12-15T15:48:10.148Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features-test/1734277689913 --filter label=devcontainer.is_test_run=true
+[2024-12-15T15:48:10.185Z] Stop (37 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features-test/1734277689913 --filter label=devcontainer.is_test_run=true
+[2024-12-15T15:48:10.186Z] Start: Run: docker inspect --type image ubuntu:focal
+[2024-12-15T15:48:10.203Z] Stop (17 ms): Run: docker inspect --type image ubuntu:focal
+[2024-12-15T15:48:10.205Z] Resolving Feature dependencies for './shell-history'...
+[2024-12-15T15:48:10.205Z] * Processing feature: ./shell-history
+[2024-12-15T15:48:10.205Z] Local disk feature.
+[2024-12-15T15:48:10.205Z] * Processing feature: ghcr.io/devcontainers/features/common-utils
+[2024-12-15T15:48:10.376Z] Start: Run: docker-credential-osxkeychain get
+[2024-12-15T15:48:10.414Z] Stop (38 ms): Run: docker-credential-osxkeychain get
+[2024-12-15T15:48:10.659Z] * Processing feature: ghcr.io/meaningful-ooo/devcontainer-features/fish
+[2024-12-15T15:48:10.791Z] Soft-dependency 'ghcr.io/meaningful-ooo/devcontainer-features/fish' is not required.  Removing from installation order...
+[2024-12-15T15:48:10.791Z] Soft-dependency 'ghcr.io/devcontainers/features/common-utils' is not required.  Removing from installation order...
+[2024-12-15T15:48:10.812Z] * Fetching feature: shell-history_0_file-path
+[2024-12-15T15:48:10.817Z] Start: Run: docker buildx build --load --build-context dev_containers_feature_content_source=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features/0.72.0-1734277690204 --build-arg _DEV_CONTAINERS_BASE_IMAGE=ubuntu:focal --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f /var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features/0.72.0-1734277690204/Dockerfile.extended -t vsc-1734277689913-2fbac913483b0642ff68b30aaf044d5f69ed5e8af863f2f77e5793b40f9d2aa1-features /var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/empty-folder
+[2024-12-15T15:48:11.178Z] #0 building with "orbstack" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.extended
+#1 transferring dockerfile: 1.86kB done
+
+[2024-12-15T15:48:11.179Z] #1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1.4
+
+[2024-12-15T15:48:11.668Z] #2 DONE 0.6s
+
+[2024-12-15T15:48:11.780Z] 
+#3 docker-image://docker.io/docker/dockerfile:1.4@sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc
+#3 CACHED
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/ubuntu:focal
+#5 DONE 0.0s
+
+#6 [context dev_containers_feature_content_source] load .dockerignore
+#6 transferring dev_containers_feature_content_source: 2B done
+#6 DONE 0.0s
+
+[2024-12-15T15:48:11.886Z] 
+#7 [dev_containers_feature_content_normalize 1/3] FROM docker.io/library/ubuntu:focal
+#7 DONE 0.0s
+
+#8 [context dev_containers_feature_content_source] load from client
+#8 transferring dev_containers_feature_content_source: 10.35kB done
+#8 DONE 0.0s
+
+#9 [dev_containers_feature_content_normalize 2/3] COPY --from=dev_containers_feature_content_source devcontainer-features.builtin.env /tmp/build-features/
+#9 CACHED
+
+#10 [dev_containers_feature_content_normalize 3/3] RUN chmod -R 0755 /tmp/build-features/
+#10 CACHED
+
+#11 [dev_containers_target_stage 3/5] COPY --from=dev_containers_feature_content_normalize /tmp/build-features/ /tmp/dev-container-features
+#11 CACHED
+
+#12 [dev_containers_target_stage 2/5] RUN mkdir -p /tmp/dev-container-features
+#12 CACHED
+
+#13 [dev_containers_target_stage 4/5] RUN echo "_CONTAINER_USER_HOME=$( (command -v getent >/dev/null 2>&1 && getent passwd 'root' || grep -E '^root|^[^:]*:[^:]*:root:' /etc/passwd || true) | cut -d: -f6)" >> /tmp/dev-container-features/devcontainer-features.builtin.env && echo "_REMOTE_USER_HOME=$( (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true) | cut -d: -f6)" >> /tmp/dev-container-features/devcontainer-features.builtin.env
+#13 CACHED
+
+#14 [dev_containers_target_stage 5/5] RUN --mount=type=bind,from=dev_containers_feature_content_source,source=shell-history_0,target=/tmp/build-features-src/shell-history_0     cp -ar /tmp/build-features-src/shell-history_0 /tmp/dev-container-features  && chmod -R 0755 /tmp/dev-container-features/shell-history_0  && cd /tmp/dev-container-features/shell-history_0  && chmod +x ./devcontainer-features-install.sh  && ./devcontainer-features-install.sh  && rm -rf /tmp/dev-container-features/shell-history_0
+#14 0.073 ===========================================================================
+#14 0.073 Feature       : Shell History
+#14 0.073 Description   : Preserve per user shell history across dev container instances. Currently supports bash, zsh, and fish
+#14 0.073 Id            : Unknown
+#14 0.073 Version       : 0.0.1
+#14 0.073 Documentation : 
+#14 0.073 Options       :
+#14 0.073     INCLUDEBASH="true"
+#14 0.073     INCLUDEZSH="false"
+#14 0.073     INCLUDEFISH="false"
+
+[2024-12-15T15:48:11.886Z] #14 0.073 ===========================================================================
+#14 0.076 INFO-> _REMOTE_USER: vscode
+#14 0.076 User 'vscode' does not exist. Creating user...
+#14 0.092 User 'vscode' created successfully with home directory: /home/vscode.
+
+[2024-12-15T15:48:11.964Z] #14 0.093 INFO-> _REMOTE_USER: vscode
+#14 0.093 INFO-> _REMOTE_USER_HOME: /home/vscode
+#14 0.093 REMOTE_USER_HOME=/home/vscode
+#14 0.093 CONTAINER_USER=root
+#14 0.093 CONTAINER_USER_HOME=/root
+#14 0.093 ACTUAL_USER: vscode
+#14 0.093 ACTUAL_USER_HOME: /home/vscode
+[2024-12-15T15:48:11.964Z] 
+#14 0.094 CURRENT_USER: root
+#14 0.094 HISTORY_DIR: /var/data/shell-history/vscode
+#14 0.095 Updated /home/vscode/.bashrc
+#14 0.095 Copying runtime script...
+#14 0.097 Per-user shell history configured for 'vscode'.
+#14 DONE 0.1s
+
+#15 exporting to image
+#15 exporting layers 0.0s done
+#15 writing image sha256:b643e938625aa985f9fd7be3b83a419a3935e6984cdde410740870692b2e9142 done
+#15 naming to docker.io/library/vsc-1734277689913-2fbac913483b0642ff68b30aaf044d5f69ed5e8af863f2f77e5793b40f9d2aa1-features done
+#15 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/orbstack/orbstack/19hcl7l6dcbg1ql4650od6jbt
+
+[2024-12-15T15:48:11.970Z] Stop (1153 ms): Run: docker buildx build --load --build-context dev_containers_feature_content_source=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features/0.72.0-1734277690204 --build-arg _DEV_CONTAINERS_BASE_IMAGE=ubuntu:focal --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp --target dev_containers_target_stage -f /var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features/0.72.0-1734277690204/Dockerfile.extended -t vsc-1734277689913-2fbac913483b0642ff68b30aaf044d5f69ed5e8af863f2f77e5793b40f9d2aa1-features /var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/empty-folder
+[2024-12-15T15:48:11.971Z] Start: Run: docker events --format {{json .}} --filter event=start
+[2024-12-15T15:48:11.972Z] Start: Starting container
+[2024-12-15T15:48:11.974Z] Start: Run: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features-test/1734277689913,target=/workspaces/1734277689913,consistency=cached --mount type=volume,src=shell-history,dst=/var/data/shell-history -l devcontainer.local_folder=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features-test/1734277689913 -l devcontainer.is_test_run=true --entrypoint /bin/sh vsc-1734277689913-2fbac913483b0642ff68b30aaf044d5f69ed5e8af863f2f77e5793b40f9d2aa1-features -c echo Container started
+[2024-12-15T15:48:12.105Z] Stop (133 ms): Starting container
+[2024-12-15T15:48:12.106Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features-test/1734277689913 --filter label=devcontainer.is_test_run=true
+[2024-12-15T15:48:12.109Z] Stop (138 ms): Run: docker events --format {{json .}} --filter event=start
+[2024-12-15T15:48:12.113Z] Container started
+[2024-12-15T15:48:12.123Z] Stop (17 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/var/folders/ml/k_4tsl_x48v4hfsrfpvg_r_m0000gn/T/devcontainercli/container-features-test/1734277689913 --filter label=devcontainer.is_test_run=true
+[2024-12-15T15:48:12.123Z] Start: Run: docker inspect --type container dac865c6970d
+[2024-12-15T15:48:12.137Z] Stop (14 ms): Run: docker inspect --type container dac865c6970d
+[2024-12-15T15:48:12.138Z] Start: Inspecting container
+[2024-12-15T15:48:12.138Z] Start: Run: docker inspect --type container dac865c6970d0d0d53866cb17f3a2064e3a36264d4c0ff53c3c393e8b7822357
+[2024-12-15T15:48:12.152Z] Stop (14 ms): Run: docker inspect --type container dac865c6970d0d0d53866cb17f3a2064e3a36264d4c0ff53c3c393e8b7822357
+[2024-12-15T15:48:12.152Z] Stop (14 ms): Inspecting container
+[2024-12-15T15:48:12.153Z] Start: Run in container: /bin/sh
+[2024-12-15T15:48:12.153Z] Start: Run in container: uname -m
+[2024-12-15T15:48:12.184Z] aarch64
+[2024-12-15T15:48:12.184Z] 
+[2024-12-15T15:48:12.184Z] Stop (31 ms): Run in container: uname -m
+[2024-12-15T15:48:12.184Z] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-12-15T15:48:12.184Z] NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+[2024-12-15T15:48:12.184Z] 
+[2024-12-15T15:48:12.184Z] Stop (0 ms): Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-12-15T15:48:12.185Z] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[2024-12-15T15:48:12.185Z] Stop (0 ms): Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[2024-12-15T15:48:12.186Z] Start: Run in container: test -f '/var/devcontainer/.patchEtcEnvironmentMarker'
+[2024-12-15T15:48:12.186Z] 
+[2024-12-15T15:48:12.186Z] 
+[2024-12-15T15:48:12.186Z] Exit code 1
+[2024-12-15T15:48:12.186Z] Stop (0 ms): Run in container: test -f '/var/devcontainer/.patchEtcEnvironmentMarker'
+[2024-12-15T15:48:12.186Z] Start: Run in container: /bin/sh
+[2024-12-15T15:48:12.187Z] Start: Run in container: test ! -f '/var/devcontainer/.patchEtcEnvironmentMarker' && set -o noclobber && mkdir -p '/var/devcontainer' && { > '/var/devcontainer/.patchEtcEnvironmentMarker' ; } 2> /dev/null
+[2024-12-15T15:48:12.215Z] 
+[2024-12-15T15:48:12.215Z] 
+[2024-12-15T15:48:12.215Z] Stop (28 ms): Run in container: test ! -f '/var/devcontainer/.patchEtcEnvironmentMarker' && set -o noclobber && mkdir -p '/var/devcontainer' && { > '/var/devcontainer/.patchEtcEnvironmentMarker' ; } 2> /dev/null
+[2024-12-15T15:48:12.215Z] Start: Run in container: cat >> /etc/environment <<'etcEnvrionmentEOF'
+[2024-12-15T15:48:12.218Z] 
+[2024-12-15T15:48:12.218Z] 
+[2024-12-15T15:48:12.218Z] Stop (3 ms): Run in container: cat >> /etc/environment <<'etcEnvrionmentEOF'
+[2024-12-15T15:48:12.218Z] Start: Run in container: test -f '/var/devcontainer/.patchEtcProfileMarker'
+[2024-12-15T15:48:12.219Z] 
+[2024-12-15T15:48:12.219Z] 
+[2024-12-15T15:48:12.219Z] Exit code 1
+[2024-12-15T15:48:12.219Z] Stop (1 ms): Run in container: test -f '/var/devcontainer/.patchEtcProfileMarker'
+[2024-12-15T15:48:12.219Z] Start: Run in container: test ! -f '/var/devcontainer/.patchEtcProfileMarker' && set -o noclobber && mkdir -p '/var/devcontainer' && { > '/var/devcontainer/.patchEtcProfileMarker' ; } 2> /dev/null
+[2024-12-15T15:48:12.220Z] 
+[2024-12-15T15:48:12.220Z] 
+[2024-12-15T15:48:12.220Z] Stop (1 ms): Run in container: test ! -f '/var/devcontainer/.patchEtcProfileMarker' && set -o noclobber && mkdir -p '/var/devcontainer' && { > '/var/devcontainer/.patchEtcProfileMarker' ; } 2> /dev/null
+[2024-12-15T15:48:12.220Z] Start: Run in container: sed -i -E 's/((^|\s)PATH=)([^\$]*)$/\1${PATH:-\3}/g' /etc/profile || true
+[2024-12-15T15:48:12.221Z] 
+[2024-12-15T15:48:12.221Z] 
+[2024-12-15T15:48:12.221Z] Stop (1 ms): Run in container: sed -i -E 's/((^|\s)PATH=)([^\$]*)$/\1${PATH:-\3}/g' /etc/profile || true
+[2024-12-15T15:48:12.221Z] userEnvProbe: loginInteractiveShell (default)
+[2024-12-15T15:48:12.221Z] userEnvProbe: not found in cache
+[2024-12-15T15:48:12.221Z] userEnvProbe shell: /bin/sh
+[2024-12-15T15:48:12.221Z] Start: Run in container: /bin/sh -lic echo -n 0542d629-edd7-4069-9720-8f6d757bbf8d; cat /proc/self/environ; echo -n 0542d629-edd7-4069-9720-8f6d757bbf8d
+[2024-12-15T15:48:12.222Z] Start: Run in container: mkdir -p '/home/vscode/.devcontainer' && CONTENT="$(cat '/home/vscode/.devcontainer/.onCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-12-15T15:48:11.984790323Z}" != '2024-12-15T15:48:11.984790323Z' ] && echo '2024-12-15T15:48:11.984790323Z' > '/home/vscode/.devcontainer/.onCreateCommandMarker'
+[2024-12-15T15:48:12.224Z] 
+[2024-12-15T15:48:12.224Z] 
+[2024-12-15T15:48:12.224Z] Stop (2 ms): Run in container: mkdir -p '/home/vscode/.devcontainer' && CONTENT="$(cat '/home/vscode/.devcontainer/.onCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-12-15T15:48:11.984790323Z}" != '2024-12-15T15:48:11.984790323Z' ] && echo '2024-12-15T15:48:11.984790323Z' > '/home/vscode/.devcontainer/.onCreateCommandMarker'
+[2024-12-15T15:48:12.224Z] Running the onCreateCommand from Feature './shell-history'...
+
+[2024-12-15T15:48:12.253Z] Stop (32 ms): Run in container: /bin/sh -lic echo -n 0542d629-edd7-4069-9720-8f6d757bbf8d; cat /proc/self/environ; echo -n 0542d629-edd7-4069-9720-8f6d757bbf8d
+[2024-12-15T15:48:12.254Z] userEnvProbe PATHs:
+Probe:     '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+Container: '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+[2024-12-15T15:48:12.254Z] Start: Run in container: /bin/sh -c shell-history-setup.sh
+[2024-12-15T15:48:12.286Z] Current User: vscode
+_REMOTE_USER: unset
+_CONTAINER_USER: unset
+[2024-12-15T15:48:12.286Z] Remote User: vscode
+Container User: 
+[2024-12-15T15:48:12.287Z] Current User: vscode
+[2024-12-15T15:48:12.287Z] 
+[2024-12-15T15:48:12.287Z] /usr/local/bin/shell-history-setup.sh: line 34: sudo: command not found
+[2024-12-15T15:48:12.289Z] Stop (35 ms): Run in container: /bin/sh -c shell-history-setup.sh
+[2024-12-15T15:48:12.289Z] onCreateCommand failed with exit code 127. Skipping any further user-provided commands.
+[-] Failed to launch container:
+
+Command failed: /bin/sh -c shell-history-setup.sh

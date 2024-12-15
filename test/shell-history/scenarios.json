@@ -1,0 +1,29 @@
+{
+    "bash_history_created": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "shell-history": {
+                "IncludeBASH": true
+            }
+        }
+    },
+    "zsh_history_created": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "shell-history": {
+                "IncludeBASH": "false",
+                "IncludeZSH": "true"
+            }
+        }
+    },
+    "fish_history_created": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "shell-history": {
+                "IncludeBASH": "false",
+                "IncludeZSH": "false",
+                "IncludeFISH": "true"
+            }
+        }
+    }
+}
